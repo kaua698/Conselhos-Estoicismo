@@ -1,0 +1,23 @@
+# Variáveis de ambiente (o site não usa nenhuma, mas nunca versione segredos)
+.env
+.env.*
+!.env.example
+
+# Dependências e builds (caso use `npx serve` ou ferramentas no futuro)
+node_modules/
+dist/
+.cache/
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*

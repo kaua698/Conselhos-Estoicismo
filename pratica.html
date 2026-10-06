@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática — Conselho do Dia</title>
+    <meta name="description" content="Exercícios estoicos de poucos minutos: dicotomia do controle, memento mori, premeditatio malorum, exame do dia e mais.">
+    <meta name="theme-color" content="#0E0E0D">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Instrument+Sans:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="pratica">
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v17l-6-4-6 4z"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 8 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"/></symbol>
+  </svg>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">Conselho do Dia</span>
+        <span class="brand__sub">Estoicismo para a vida real.</span>
+      </a>
+      <time class="top-date" data-today></time>
+      <nav class="top-nav" aria-label="Principal">
+        <a href="index.html">Hoje</a>
+        <a href="explorar.html">Explorar</a>
+        <a href="reflexoes.html">Reflexões</a>
+        <a href="pratica.html" aria-current="page">Prática</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="page">
+    <header style="display:flex;flex-direction:column;gap:10px">
+      <h1 class="page-title">Prática</h1>
+      <p class="lead">Exercícios curtos que os estoicos usavam para treinar o julgamento.</p>
+    </header>
+
+    <section class="card" aria-labelledby="perspectiva-titulo" data-perspective>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div class="block__head">
+          <h2 class="eyebrow perspective__title" id="perspectiva-titulo">Preciso de perspectiva</h2>
+          <p class="perspective__counter" data-counter></p>
+        </div>
+        <p class="perspective__situation" data-situation></p>
+      </div>
+      <fieldset class="options">
+        <legend>O que está sob seu controle?</legend>
+        <div data-options style="display:flex;flex-direction:column;gap:8px"></div>
+      </fieldset>
+      <button type="button" class="btn btn--primary" data-reveal>Ver a perspectiva estoica</button>
+      <div class="perspective__answer" aria-live="polite" data-answer hidden>
+        <p class="perspective__lead" data-lead></p>
+        <p class="explanation" data-reasoning></p>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <p class="eyebrow">Faça agora</p>
+          <p class="action-text" data-do></p>
+        </div>
+        <button type="button" class="btn" style="align-self:flex-start" data-next>Próxima situação →</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="exercicios-titulo">
+      <h2 class="eyebrow" id="exercicios-titulo">Exercícios</h2>
+      <div class="exercises" style="margin-top:8px">
+        <details class="exercise">
+          <summary>
+            <span class="row__body">
+              <span class="row__title">Dicotomia do controle</span>
+              <span class="row__desc">Separar o que depende de você do que não depende.</span>
+            </span>
+            <span class="exercise__meta"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>3 min<svg class="icon icon--chevron" aria-hidden="true"><use href="#i-chevron"/></svg></span>
+          </summary>
+          <div class="exercise__body">
+            <div><h3>O que é</h3><p>A distinção com que Epicteto abre o <em>Manual</em>: dependem de nós os julgamentos, as intenções e as ações; não dependem o corpo, a reputação, os resultados e as outras pessoas.</p></div>
+            <div><h3>Para que serve</h3><p>Parar de gastar energia com o que você não pode mudar e colocá-la onde faz diferença.</p></div>
+            <div><h3>Como fazer</h3>
+            <ol>
+              <li>Escolha uma situação que está te incomodando.</li>
+              <li>Divida uma folha em duas colunas: “depende de mim” e “não depende”.</li>
+              <li>Distribua cada parte da situação entre as colunas.</li>
+              <li>Escolha uma ação da primeira coluna.</li>
+            </ol></div>
+            <div><h3>Ação de hoje</h3><p><strong>Faça hoje a ação que você escolheu.</strong></p></div>
+          </div>
+        </details>
+        <details class="exercise">
+          <summary>
+            <span class="row__body">
+              <span class="row__title">Memento mori</span>
+              <span class="row__desc">Lembrar que o tempo é limitado para usar melhor o de hoje.</span>
+            </span>
+            <span class="exercise__meta"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>2 min<svg class="icon icon--chevron" aria-hidden="true"><use href="#i-chevron"/></svg></span>
+          </summary>
+          <div class="exercise__body">
+            <div><h3>O que é</h3><p>“Lembra-te de que vais morrer.” Marco Aurélio volta a essa ideia muitas vezes nas <em>Meditações</em>, não como ameaça, mas como lembrete de prioridade.</p></div>
+            <div><h3>Para que serve</h3><p>Dar peso ao que importa e tirar peso do que não importa.</p></div>
+            <div><h3>Como fazer</h3>
+            <ol>
+              <li>Pergunte: se o tempo fosse curto, isso que me ocupa teria importância?</li>
+              <li>Note o que ficaria e o que sairia da sua lista.</li>
+              <li>Escolha uma coisa para priorizar hoje.</li>
+            </ol></div>
+            <div><h3>Ação de hoje</h3><p><strong>Diga a alguém algo que você vem adiando dizer.</strong></p></div>
+          </div>
+        </details>
+        <details class="exercise">
+          <summary>
+            <span class="row__body">
+              <span class="row__title">Premeditatio malorum</span>
+              <span class="row__desc">Imaginar o que pode dar errado e preparar sua resposta.</span>
+            </span>
+            <span class="exercise__meta"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>5 min<svg class="icon icon--chevron" aria-hidden="true"><use href="#i-chevron"/></svg></span>
+          </summary>
+          <div class="exercise__body">
+            <div><h3>O que é</h3><p>Antecipar dificuldades, prática que Sêneca descreve nas cartas. Não é pessimismo: é ensaio.</p></div>
+            <div><h3>Para que serve</h3><p>Reduzir o susto quando algo dá errado e ter uma resposta pronta.</p></div>
+            <div><h3>Como fazer</h3>
+            <ol>
+              <li>Escolha um compromisso de hoje ou desta semana.</li>
+              <li>Liste o que pode dar errado.</li>
+              <li>Para cada item, escreva como você responderia.</li>
+              <li>Solte o resto: você já se preparou.</li>
+            </ol></div>
+            <div><h3>Ação de hoje</h3><p><strong>Prepare uma resposta para o problema mais provável de hoje.</strong></p></div>
+          </div>
+        </details>
+        <details class="exercise">
+          <summary>
+            <span class="row__body">
+              <span class="row__title">Exame do fim do dia</span>
+              <span class="row__desc">Três perguntas antes de dormir sobre o que você fez.</span>
+            </span>
+            <span class="exercise__meta"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>5 min<svg class="icon icon--chevron" aria-hidden="true"><use href="#i-chevron"/></svg></span>
+          </summary>
+          <div class="exercise__body">
+            <div><h3>O que é</h3><p>Uma revisão noturna, inspirada no exame que Sêneca diz fazer todas as noites em <em>Sobre a ira</em>.</p></div>
+            <div><h3>Para que serve</h3><p>Aprender com o dia sem se punir por ele.</p></div>
+            <div><h3>Como fazer</h3>
+            <ol>
+              <li>O que eu fiz bem hoje?</li>
+              <li>Onde eu errei?</li>
+              <li>O que vou fazer diferente amanhã?</li>
+            </ol></div>
+            <div><h3>Ação de hoje</h3><p><strong>Responda às três perguntas hoje à noite, por escrito ou de cabeça.</strong></p></div>
+          </div>
+        </details>
+        <details class="exercise">
+          <summary>
+            <span class="row__body">
+              <span class="row__title">Questionar o julgamento</span>
+              <span class="row__desc">Separar o fato da opinião que você colou nele.</span>
+            </span>
+            <span class="exercise__meta"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>3 min<svg class="icon icon--chevron" aria-hidden="true"><use href="#i-chevron"/></svg></span>
+          </summary>
+          <div class="exercise__body">
+            <div><h3>O que é</h3><p>Epicteto ensina a testar cada impressão antes de aceitá-la: o que aconteceu, de fato, e o que é interpretação minha?</p></div>
+            <div><h3>Para que serve</h3><p>Perceber quando a interpretação pesa mais que o próprio fato.</p></div>
+            <div><h3>Como fazer</h3>
+            <ol>
+              <li>Descreva a situação usando só fatos.</li>
+              <li>Escreva o julgamento que você colocou em cima dela.</li>
+              <li>Pergunte: isso é um fato ou uma opinião minha?</li>
+            </ol></div>
+            <div><h3>Ação de hoje</h3><p><strong>Reescreva um problema de hoje sem nenhum adjetivo.</strong></p></div>
+          </div>
+        </details>
+        <details class="exercise">
+          <summary>
+            <span class="row__body">
+              <span class="row__title">Pausa antes de reagir</span>
+              <span class="row__desc">Dez segundos entre o que aconteceu e a sua resposta.</span>
+            </span>
+            <span class="exercise__meta"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>1 min<svg class="icon icon--chevron" aria-hidden="true"><use href="#i-chevron"/></svg></span>
+          </summary>
+          <div class="exercise__body">
+            <div><h3>O que é</h3><p>Criar um espaço entre o impulso e a ação. Sêneca considerava a demora um dos melhores remédios contra a raiva.</p></div>
+            <div><h3>Para que serve</h3><p>Responder em vez de reagir.</p></div>
+            <div><h3>Como fazer</h3>
+            <ol>
+              <li>Perceba o impulso chegando — no corpo, na voz, na pressa.</li>
+              <li>Respire duas vezes ou conte até dez.</li>
+              <li>Pergunte: o que depende de mim aqui?</li>
+              <li>Só então responda.</li>
+            </ol></div>
+            <div><h3>Ação de hoje</h3><p><strong>Use a pausa na primeira irritação de hoje.</strong></p></div>
+          </div>
+        </details>
+        <details class="exercise">
+          <summary>
+            <span class="row__body">
+              <span class="row__title">Gratidão</span>
+              <span class="row__desc">Notar o que você já tem antes de pedir mais.</span>
+            </span>
+            <span class="exercise__meta"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>2 min<svg class="icon icon--chevron" aria-hidden="true"><use href="#i-chevron"/></svg></span>
+          </summary>
+          <div class="exercise__body">
+            <div><h3>O que é</h3><p>Marco Aurélio abre as <em>Meditações</em> listando o que aprendeu com cada pessoa da sua vida.</p></div>
+            <div><h3>Para que serve</h3><p>Equilibrar a atenção que o desejo puxa para o que falta.</p></div>
+            <div><h3>Como fazer</h3>
+            <ol>
+              <li>Liste três coisas que você já tem.</li>
+              <li>Escolha uma e imagine como seria não tê-la.</li>
+              <li>Volte a ela com outros olhos.</li>
+            </ol></div>
+            <div><h3>Ação de hoje</h3><p><strong>Agradeça a alguém por algo específico.</strong></p></div>
+          </div>
+        </details>
+        <details class="exercise">
+          <summary>
+            <span class="row__body">
+              <span class="row__title">Escrita</span>
+              <span class="row__desc">Escrever para pensar com mais clareza.</span>
+            </span>
+            <span class="exercise__meta"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>5 min<svg class="icon icon--chevron" aria-hidden="true"><use href="#i-chevron"/></svg></span>
+          </summary>
+          <div class="exercise__body">
+            <div><h3>O que é</h3><p>As <em>Meditações</em> são, em grande parte, anotações que Marco Aurélio escrevia para si mesmo — não para publicar.</p></div>
+            <div><h3>Para que serve</h3><p>Organizar o pensamento e enxergar o que estava confuso.</p></div>
+            <div><h3>Como fazer</h3>
+            <ol>
+              <li>Escreva sem editar por cinco minutos.</li>
+              <li>Releia com calma.</li>
+              <li>Sublinhe uma frase que vale guardar.</li>
+            </ol></div>
+            <div><h3>Ação de hoje</h3><p><strong>Guarde a frase sublinhada na resposta do conselho de hoje.</strong></p></div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <p class="lead" style="font-size:13px;color:var(--ink-3)">Este é um espaço de reflexão e estudo, não de terapia. Se algo estiver difícil demais, procure apoio profissional — ou ligue para o CVV no 188.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Suas reflexões ficam só neste navegador.</p>
+      <nav aria-label="Rodapé">
+        <a href="sobre.html#fontes">Fontes e método</a>
+        <a href="sobre.html#nao-estoicas">Frases que não são estoicas</a>
+        <a href="sobre.html#cuidado">Reflexão, não terapia</a>
+      </nav>
+    </div>
+  </footer>
+
+  <nav class="tabbar" aria-label="Principal (celular)">
+    <a href="index.html">
+      <svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg>
+      Hoje
+    </a>
+    <a href="explorar.html">
+      <svg class="icon" aria-hidden="true"><use href="#i-compass"/></svg>
+      Explorar
+    </a>
+    <a href="reflexoes.html">
+      <svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>
+      Reflexões
+    </a>
+    <a href="pratica.html" aria-current="page">
+      <svg class="icon" aria-hidden="true"><use href="#i-target"/></svg>
+      Prática
+    </a>
+  </nav>
+
+  <p class="toast" role="status" aria-live="polite" data-toast></p>
+
+  <script src="data.js"></script>
+  <script src="storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
