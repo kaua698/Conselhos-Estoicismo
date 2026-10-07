@@ -3,6 +3,8 @@
 **Estoicismo para a vida real.** Uma ideia para refletir. Uma ação para praticar.
 
 
+
+
 <p align="center">
   <img src="assets/screenshot-mobile.png" alt="Conselho do Dia no celular" width="260">
   &nbsp;&nbsp;
