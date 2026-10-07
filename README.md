@@ -2,7 +2,6 @@
 
 **Estoicismo para a vida real.** Uma ideia para refletir. Uma ação para praticar.
 
-🔗 https://kaua698.github.io/estoicismobased/
 
 <p align="center">
   <img src="assets/screenshot-mobile.png" alt="Conselho do Dia no celular" width="260">
